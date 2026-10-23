@@ -31,7 +31,3 @@ Run from the repo root:
 - Versions go in `gradle/libs.versions.toml`. Do not hardcode dependency versions in `app/build.gradle.kts`.
 - Keep UI in Compose. Keep state in ViewModels and expose it through `UiState`.
 - Do not commit `local.properties` or API keys. The Maps secrets plugin reads them from local files that are gitignored.
-
-## Known issues
-
-- `app/build.gradle.kts` is currently malformed. The `defaultConfig` block is not closed, and the `compileOptions` section contains garbled text, so Gradle will not configure the module. Fix this before running any build or test command.
